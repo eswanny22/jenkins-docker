@@ -1,5 +1,4 @@
 pipeline {
-  stages {
 
     stage('Run Cypress tests') {
       script {
@@ -12,6 +11,5 @@ pipeline {
         }
       }
     }
-  }
 }
 
