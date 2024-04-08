@@ -10,5 +10,5 @@ services:
     - 50000:50000
     container_name: jenkins
     volumes:
-      - /Users/carolina/Desktop/Repos/alex-jenkins-repro/jenkins_configuration:/var/jenkins_home
+      - /Users/eric/Repos/docker-jenkins-tiny/jenkins_configuration:/var/jenkins_home
       - /var/run/docker.sock:/var/run/docker.sock
