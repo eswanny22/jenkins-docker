@@ -4,6 +4,7 @@ pipeline {
     stage('build and test') {
 
       steps {
+        sh 'npm ci'
         sh 'npx cypress run'
       }
     }
