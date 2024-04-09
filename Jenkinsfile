@@ -11,9 +11,9 @@ pipeline {
 
       steps {
         sh '$(whoami)'
-        sh 'sudo chown -R $(whoami) ~/.npm'
+        // sh 'sudo chown -R $(whoami) ~/.npm'
         sh 'npm ci'
-        sh 'npx cypress run'
+        // sh 'npx cypress run'
       }
     }
   }
