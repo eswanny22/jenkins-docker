@@ -10,8 +10,8 @@ pipeline {
     stage('build and test') {
 
       steps {
+        sh 'sudo chown -R $(whoami) ~/.npm'
         sh 'npm ci'
-        sh 'export npm_config_cache="\$(pwd)/.npm"'
         sh 'npx cypress run'
       }
     }
