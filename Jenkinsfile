@@ -11,7 +11,7 @@ pipeline {
 
       steps {
         sh 'export npm_config_cache=/home/node/app/.npm'
-        sh 'chown -R 503:20 "/.npm"'
+        sh 'chown -R 503:20 "/home/node/app/.npm"'
         sh 'npm ci'
         sh 'npx cypress run'
       }
