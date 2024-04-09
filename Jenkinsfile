@@ -11,8 +11,6 @@ pipeline {
 
       steps {
         sh 'npm ci'
-        sh 'apt-get install sudo -y'
-        sh 'sudo chown -R 503:20 "/.npm"'
         sh 'npx cypress run'
       }
     }
