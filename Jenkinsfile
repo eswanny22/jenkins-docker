@@ -11,7 +11,6 @@ pipeline {
 
       steps {
         sh 'npm ci'
-        sh 'sudo chown -R 503:20 "/.npm"'
         sh 'npx cypress run'
       }
     }
