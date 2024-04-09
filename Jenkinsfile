@@ -10,8 +10,7 @@ pipeline {
     stage('build and test') {
 
       steps {
-        sh 'export npm_config_cache=/home/node/app/.npm'
-        sh 'chown -R 503:20 "/home/node/app/.npm"'
+        sh 'npm cache clean --force'
         sh 'npm ci'
         sh 'npx cypress run'
       }
