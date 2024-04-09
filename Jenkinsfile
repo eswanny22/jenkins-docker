@@ -10,8 +10,9 @@ pipeline {
     stage('build and test') {
 
       steps {
-        sh 'sudo chown -R 503:20 "/.npm"'
         sh 'npm ci'
+        sh 'apt-get install sudo -y'
+        sh 'sudo chown -R 503:20 "/.npm"'
         sh 'npx cypress run'
       }
     }
