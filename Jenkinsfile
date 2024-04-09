@@ -10,8 +10,8 @@ pipeline {
     stage('build and test') {
 
       steps {
-        sh 'chown -R 503:20 "/.npm"'
         sh 'npm ci'
+        sh 'chown -R 503:20 "/.npm"'
         sh 'npx cypress run'
       }
     }
