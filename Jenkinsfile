@@ -1,6 +1,5 @@
 pipeline {
-    agent {
-        environment {
+          environment {
         // we will be recording test results on Cypress Cloud
         // to record we need to set an environment variable
         // we can load the record key variable from credentials store
@@ -9,6 +8,7 @@ pipeline {
           'org.jenkinsci.plugins.docker.commons.tools.DockerTool' 'docker'
         }
       }
+    agent {
     // this image provides everything needed to run Cypress
     docker {
       image 'cypress/included:latest'
